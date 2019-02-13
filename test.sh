@@ -14,7 +14,8 @@ echo -e "deb http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main multiverse 
 \ndeb-src http://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main multiverse restricted universe" >> /etc/apt/sources.list
 apt-get update
 apt-get -y install python
-apt-get -y install python-pip
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
 apt-get -y install git
 apt-get -y install supervisor
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple Django==1.11.18
