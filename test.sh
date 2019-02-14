@@ -16,6 +16,7 @@ apt-get update
 apt-get -y install python
 curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 python get-pip.py
+rm get-pip.py
 apt-get -y install git
 apt-get -y install supervisor
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple Django==1.11.18
@@ -24,4 +25,5 @@ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple Django==1.11.18
 rm -rf django-helloworld/
 git clone https://github.com/ziwen1942/django-helloworld.git
 # python django-helloworld/manage.py runserver 0.0.0.0:8000 
-
+cp django-helloworld/supervisor.sh supervisor.sh
+chmod +x supervisor.sh
